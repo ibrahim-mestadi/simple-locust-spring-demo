@@ -10,7 +10,7 @@ services:
   locust: 
     build: ./locust-tester
     ports:
-      - "8089:8098"
+      - "8089:8089"
     networks:
       - locustnet
     depends_on:
