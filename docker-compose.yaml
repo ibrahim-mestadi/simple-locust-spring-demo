@@ -1,0 +1,26 @@
+services:
+  app:
+    build: ./spring-service
+    ports:
+      - "8080:8080"
+    networks:
+      - locustnet
+    restart: always
+  
+  locust: 
+    build: ./locust-tester
+    ports:
+      - "8089:8098"
+    networks:
+      - locustnet
+    depends_on:
+      - app
+    environment:
+      - LOCUST_USERS=10
+      - LOCUST_HATCH_RATE=1
+      - LOCUST_RUN_TIME=10s
+      - LOCUST_HOST=http://app:8080
+    restart: always
+networks:
+  locustnet:
+
