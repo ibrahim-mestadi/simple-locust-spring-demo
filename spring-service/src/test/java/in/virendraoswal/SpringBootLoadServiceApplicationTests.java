@@ -1,13 +1,13 @@
-package com.bihi.springservice;
+package in.virendraoswal;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringServiceApplicationTests {
+class SpringBootLoadServiceApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }
